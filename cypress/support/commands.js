@@ -46,7 +46,7 @@ Cypress.Commands.add("login", (name) => {
       cy.get("#login-submit").click();
 
       // Detect that we are automate
-      cy.wait(4000);
+      cy.wait(8000);
 
       // enter password
       cy.get("#password").type(password);
