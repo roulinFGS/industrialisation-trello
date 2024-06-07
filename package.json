@@ -1,0 +1,17 @@
+{
+  "name": "mini-projet-trello",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.10.0",
+    "@4tw/cypress-drag-drop": "^2.2.5"
+  }
+}
