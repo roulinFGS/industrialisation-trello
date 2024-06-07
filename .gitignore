@@ -3,4 +3,3 @@ cypress/screenshots/
 cypress/results/
 cypress/videos/
 mydownloads/
-cypress/fixtures/user.json
