@@ -7,12 +7,12 @@ npm i
 
 - create your account in (trello)[https://trello.com/]
 
-- create a file user in cypress/fixtures/user.json with your email and password
+- create a .env file at the root of directory like tho
 ```
-{
-    "email": "jean.porte@gmail.com",
-    "password": "1234564789"
-}
+NAME=<somebody>
+EMAIL=<your email used to login trello>
+PASSWORD=<your trello password>
+BOARD_URL=/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3
 ```
 
 # how to test

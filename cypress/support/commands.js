@@ -66,7 +66,7 @@ Cypress.Commands.add("login", (name) => {
       ).click();
     });
 
-    cy.get('[href="/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3"]').click();
+    cy.get(`[href="${Cypress.env("board_url")}"]`).click();
   });
 });
 

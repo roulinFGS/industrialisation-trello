@@ -9,7 +9,7 @@ describe("Add cards to backlog", () => {
     cy.login(name);
 
     // Go to the dashboard
-    cy.visit("https://trello.com/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3");
+    cy.visit(Cypress.env("board_url"));
 
     // Select Backlog column
     for (let index = 0; index < cards.length; index++) {
