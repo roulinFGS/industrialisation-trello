@@ -62,6 +62,8 @@ Cypress.Commands.add("login", (name) => {
       // Variable visibility nescessites that import
       const { email } = Cypress.require("../fixtures/user");
 
+      cy.wait(6000);
+
       cy.get(
         `[href='${Cypress.config().baseUrl}/appSwitcherLogin?login_hint=${email}']`
       ).click();
