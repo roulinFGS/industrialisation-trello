@@ -6,13 +6,14 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run"
   },
-  "type": "module", 
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
     "cypress": "^13.10.0",
-    "@4tw/cypress-drag-drop": "^2.2.5"
+    "dotenv": "^16.4.5"
   }
 }

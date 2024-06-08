@@ -27,7 +27,7 @@ import "@4tw/cypress-drag-drop";
 
 Cypress.Commands.add("login", (name) => {
   cy.session(name, () => {
-    cy.visit("https://trello.com/");
+    cy.visit("/");
 
     cy.contains("Log in").click();
 
@@ -59,14 +59,15 @@ Cypress.Commands.add("login", (name) => {
     });
 
     cy.origin("https://team.atlassian.com/", () => {
+      // Variable visibility nescessites that import
       const { email } = Cypress.require("../fixtures/user");
 
       cy.get(
-        `[href='https://trello.com/appSwitcherLogin?login_hint=${email}']`
+        `[href='${Cypress.config().baseUrl}/appSwitcherLogin?login_hint=${email}']`
       ).click();
     });
 
-    cy.get('[href="/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3"]').click();
+    cy.get(`[href="${Cypress.env("board_url")}"]`).click();
   });
 });
 

@@ -5,9 +5,14 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+    env: 
+      PASSWORD: ${{ secrets.PASSWORD }}
+      EMAIL: ${{ secrets.EMAIL }}
+      NAME: ${{ secrets.NAME }}
+      BOARD_URL: ${{ vars.BOARD_URL }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4    
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
