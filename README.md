@@ -12,6 +12,8 @@ npm i
 NAME=<somebody>
 EMAIL=<your email used to login trello>
 PASSWORD=<your trello password>
+
+# board url is currently shared within groupe3 with a url given by Trello 
 BOARD_URL=/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3
 ```
 
