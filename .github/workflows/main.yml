@@ -5,27 +5,22 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+    env: 
+      PASSWORD: ${{ secrets.PASSWORD }}
+      EMAIL: ${{ secrets.EMAIL }}
+      NAME: ${{ secrets.NAME }}
+      BOARD_URL: ${{ vars.BOARD_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4    
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@v6
-      #   with:
-      #     start: npm run cy:run
-      # - name: Report
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: video_reports
-      #     path: ./cypress/videos/*.mp4
-  linux_job:
-    runs-on: ubuntu-22.04
-    env:
-      USER: ${{ secrets.user }}
-      # NAME: ${{ secrets.user.NAME }}
-      # EMAIL: =bidulebuck+29052024@gmail.com
-      # PASSWORD: =aaaaaaaaA1&
-      # BOARD_URL: =/b/Or7IO0r0/wcs-qa2024-cypress-trello-grp3
-    steps:
-      - run: echo 'Hi ${{ env }}'
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run cy:run
+      - name: Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: video_reports
+          path: ./cypress/videos/*.mp4
